@@ -22,7 +22,14 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     implementation(platform("software.amazon.awssdk:bom:2.21.1"))
+    implementation("software.amazon.awssdk:url-connection-client:2.26.19")
     implementation("software.amazon.awssdk:s3")
+
+    // https://mvnrepository.com/artifact/io.findify/s3mock
+    implementation("io.findify:s3mock_2.13:0.2.6")
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.23.1")
 
     // This dependency is used by the application.
     implementation(libs.guava)
